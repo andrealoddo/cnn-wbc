@@ -1,5 +1,5 @@
-ALL_IDB2_rgb = datastore(fullfile(ALL_IDB, 'ALL_IDB2', 'img'),'FileExtensions', '.tif','Type', 'image');
-ALL_IDB2_wbc = datastore(fullfile(ALL_IDB, 'ALL_IDB2', 'gt', '*WBC.tif'),'FileExtensions', '.tif','Type', 'image');
+ALL_IDB2_rgb = datastore(fullfile('C:\Users\simoc\Desktop\cnn-wbc\ALL_IDB\ALL_IDB2', 'img'),'FileExtensions', '.tif','Type', 'image');
+ALL_IDB2_wbc = datastore(fullfile('C:\Users\simoc\Desktop\cnn-wbc\ALL_IDB\ALL_IDB2', 'gt_s', '*WBC.tif'),'FileExtensions', '.tif','Type', 'image');
 
 for i=1:size(ALL_IDB2_rgb.Files,1)
     
@@ -17,6 +17,6 @@ for i=1:size(ALL_IDB2_rgb.Files,1)
     RGB(:,:,2) = G;
     RGB(:,:,3) = B;
     
-    imwrite(RGB, fullfile(ALL_IDB, 'ALL_IDB2', 'cnn', strcat('Im', num2str(i),'_cnn', '.tif')));
+    imwrite(RGB, fullfile('C:\Users\simoc\Desktop\cnn-wbc\ALL_IDB', 'ALL_IDB2', 'cnn', strcat('Im', num2str(i),'_cnn', '.tif')));
         
 end
